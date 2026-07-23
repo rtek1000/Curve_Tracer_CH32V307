@@ -14,6 +14,8 @@ Note: Work in progress, just demonstrative, not functional, sorry.
 
 ![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/Curve%20Tracer%20CH32V307%20v1c.png)
 
+[CH32V307-ETH board test (YD-CH32V307VCT6)](https://github.com/rtek1000/YD-CH32V307VCT6_ETHERNET-LWIP)
+
 ![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/YD-CH32V307VCT6.png)
 
 ### Hardware
