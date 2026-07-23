@@ -52,13 +52,6 @@ The circuit uses an external fixed **4.7 kΩ** resistor (Step 0 - `0000`, short-
 - **Switch 3 (PC2 - Bit 1):** 120 Ω resistor
 - **Switch 4 (PC3 - Bit 0 - LSB):** 270 Ω resistor
 
-## 💻 4. Expected Firmware Operation (Next Steps)
-
-1. **Hardware-Synchronous Sampling:** Configure `ADC1` and `ADC2` for perfectly synchronous reading (Dual-ADC interleaved or regular) on the same clock pulse, triggered by a Timer, to eliminate time skew (*jitter*) between Voltage (X) and Current (Y).
-2. **Waveform Generation via DMA:** Configure `DAC1` via DMA using a Timer-controlled Circular Buffer to generate sine waves, sawtooth waves, or modulated signals (software-mixed), with a maximum safe amplitude capped at **1.4 Vpp**.
-3. **Dynamic Gain Control:** Implement inversion logic (XOR mask) to control pins PC0-PC3 in true ascending binary order (`0` to `15`) in response to commands from the PC interface.
-4. **High-Speed ​​Communication:** Configure the transmission of structured packets `[X, Y, Z/Pin]` using the Ethernet port (via LwIP over TCP/IP for complete magnetic isolation) or High-Speed ​​USB for real-time 3D rendering in Python.
-
 ------------
 
 Note: Developed with the help of Google AI Gemini
