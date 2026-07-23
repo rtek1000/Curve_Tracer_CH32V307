@@ -28,6 +28,14 @@ Note: Work in progress, just demonstrative, not functional, sorry.
 - LM7805
 - AMS1117-3.3
 
+## ⚠️ CRITICAL HARDWARE NOTICE (YD-CH32V307VCT6 Board)
+
+This commercial development board comes factory-equipped with a **W25Q32** SPI Flash memory chip soldered directly to pins **PA2, PA5, PA6, and PA7**.
+
+Since the **DAC2 (PA5)** analog silicon blocks and the **OPA1 (PA2)** standard inputs overlap directly with the lines connected to this memory, **this project requires the physical removal (desoldering) of the W25Q32 chip from the board**.
+
+Failure to remove the component will result in destructive electrical conflicts and severe geometric distortion of the Curve Tracer's test ellipses at high frequencies, caused by the parasitic capacitance of the integrated traces.
+
 ------------
 
 # For the next steps:
