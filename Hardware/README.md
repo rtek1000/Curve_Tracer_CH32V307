@@ -41,8 +41,8 @@ This repository contains the single-channel analog hardware design for a high-re
 
 ## 📍 2. Dev Board Connection Pinout
 
-- **PA4** (DAC1) ➡️ **PA2** (OPA1_IN+) ➡️ Processamento Interno do CH32 ➡️ **PA3** (OPA1_OUT): Output (X-axis Injection Signal – generates the test waveform).
-- **PA5** (DAC2) ➡️ **PA6** (OPA2_IN+) ➡️ Processamento Interno do CH32 ➡️ **PA7** (OPA2_OUT): Output (Dynamic Reference/Virtual GND for additional modes).
+- **PA4** (DAC1) ➡️ **PA2** (OPA1_IN+) ➡️ CH32 Internal Processing ➡️ **PA3** (OPA1_OUT): Output (X-axis Injection Signal – generates the test waveform).
+- **PA5** (DAC2) ➡️ **PA6** (OPA2_IN+) ➡️ CH32 Internal Processing ➡️ **PA7** (OPA2_OUT): Output (Dynamic Reference/Virtual GND for additional modes).
 - **PA0:** `OPA3 + ADC1_CH1` Input (X-axis Reading – voltage of the pin under test).
 - **PA1:** `OPA4 + ADC2_CH2` Input (Y-axis Reading – current/voltage drop).
 - **PC0 to PC3:** Digital GPIO outputs configured to control the 4 switches of the MAX393 (Current Scaling). 
