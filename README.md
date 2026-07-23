@@ -12,7 +12,7 @@ Note: Work in progress, just demonstrative, not functional, sorry.
 
 ### Schematic
 
-![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/Curve%20Tracer%20CH32V307%20v1b.png)
+![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/Curve%20Tracer%20CH32V307%20v1c.png)
 
 ------------
 
