@@ -30,8 +30,6 @@ Note: Work in progress, just demonstrative, not functional, sorry.
 
 ![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/YD-CH32V307VCT6.png)
 
-### Hardware
-
 ## ⚠️ CRITICAL HARDWARE NOTICE (YD-CH32V307VCT6 Board)
 
 This commercial development board comes factory-equipped with a **W25Q32** SPI Flash memory chip soldered directly to pins **PA2, PA5, PA6, and PA7**.
