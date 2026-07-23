@@ -56,13 +56,13 @@ The circuit uses an external fixed **4.7 kΩ** resistor (Step 0 - `0000`, short-
 - **Switch 3 (PC2 - Bit 1):** 120 Ω resistor
 - **Switch 4 (PC3 - Bit 0 - LSB):** 270 Ω resistor
 
-## 🎛️ 4. Configuração dos OPAs Internos (Restauração e Atenuação)
+## 🎛️ 4. Internal Op-Amp Configuration (Restoration and Attenuation)
 
-O CH32V307 disponibiliza 4 grupos de OPAs internos utilizados para condicionamento ratiométrico de sinal, eliminando perdas de resolução no ADC:
-- **OPA1 (Atenuador DAC1):** Entrada em PA2, Saída em PA3. Reduz a amplitude para 1.4Vpp em hardware.
-- **OPA2 (Atenuador DAC2):** Entrada em PA6, Saída em PA7. Controla o offset/frequência secundária.
-- **OPA3 (Amplificador ADC1 - Eixo X):** Configurado com Ganho de ~2.35x para restaurar o sinal de 1.4V para a escala cheia de 3.3V do ADC.
-- **OPA4 (Amplificador ADC2 - Eixo Y):** Configurado com Ganho de ~2.35x para amplificar a leitura de corrente antes do processamento do ADC2.
+The CH32V307 features 4 groups of internal op-amps used for ratiometric signal conditioning, eliminating ADC resolution loss:
+- **OPA1 (DAC1 Attenuator):** Input at PA2, Output at PA3. Reduces amplitude to 1.4Vpp in hardware.
+- **OPA2 (DAC2 Attenuator):** Input at PA6, Output at PA7. Controls offset/secondary frequency.
+- **OPA3 (ADC1 Amplifier - X-Axis):** Configured with a gain of ~2.35x to restore the 1.4V signal to the ADC's full 3.3V scale.
+- **OPA4 (ADC2 Amplifier - Y-Axis):** Configured with a gain of ~2.35x to amplify the current reading prior to ADC2 processing.
 
 ------------
 
