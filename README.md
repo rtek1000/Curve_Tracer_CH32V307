@@ -16,7 +16,7 @@ Note: Work in progress, just demonstrative, not functional, sorry.
 
 ------------
 
-This repository contains the single-channel analog hardware design for a high-resolution instrumentation 3D Curve Tracer, specifically engineered for diagnostics and reverse engineering of sensitive processors and CPLDs.
+This repository contains the single-channel analog hardware design for a high-resolution instrumentation 3D Curve Tracer, specifically engineered for diagnostics of sensitive processors and CPLDs.
 
 ## 🔌 1. Physical Hardware Specifications
 
