@@ -9950,24 +9950,20 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1180075a-c237-4414-9b88-224f385e7f09")
-		(property "Reference" "U10"
-			(at 90.17 78.74 0)
+		(property "Reference" "U7"
+			(at 93.98 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "MAX393"
-			(at 90.17 81.026 0)
+			(at 93.98 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
@@ -10049,7 +10045,7 @@
 		(instances
 			(project "Curve Tracer CH32V307 v1"
 				(path "/1a8a08a3-9cf7-4fbc-b49c-377a866af964"
-					(reference "U10")
+					(reference "U7")
 					(unit 4)
 				)
 			)
@@ -10272,7 +10268,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "MAX393"
@@ -10282,7 +10277,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
@@ -10381,24 +10375,20 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23c06a93-0f8c-4704-97c4-2f06657271f2")
-		(property "Reference" "U8"
-			(at 90.17 43.18 0)
+		(property "Reference" "U7"
+			(at 93.98 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "MAX393"
-			(at 90.17 45.466 0)
+			(at 93.98 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
@@ -10480,7 +10470,7 @@
 		(instances
 			(project "Curve Tracer CH32V307 v1"
 				(path "/1a8a08a3-9cf7-4fbc-b49c-377a866af964"
-					(reference "U8")
+					(reference "U7")
 					(unit 2)
 				)
 			)
@@ -11128,24 +11118,20 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41c708e4-bc32-4283-8afd-b5b72181dcb4")
-		(property "Reference" "U9"
-			(at 90.17 60.96 0)
+		(property "Reference" "U7"
+			(at 93.98 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "MAX393"
-			(at 90.17 63.246 0)
+			(at 93.98 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
@@ -11227,7 +11213,7 @@
 		(instances
 			(project "Curve Tracer CH32V307 v1"
 				(path "/1a8a08a3-9cf7-4fbc-b49c-377a866af964"
-					(reference "U9")
+					(reference "U7")
 					(unit 3)
 				)
 			)
@@ -17144,26 +17130,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f11a1ab3-f230-4d5a-be89-b8906119cd27")
 		(property "Reference" "U7"
-			(at 147.32 69.85 0)
+			(at 153.162 68.326 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "MAX393"
-			(at 147.32 72.136 0)
+			(at 153.162 70.866 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
@@ -17397,10 +17380,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f459a56f-a044-4993-9bd7-85b7cc517e22")
 		(property "Reference" "U3"
-			(at 204.47 83.8199 0)
+			(at 191.516 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17409,7 +17391,7 @@
 			)
 		)
 		(property "Value" "USBLC6-4SC6"
-			(at 204.47 86.3599 0)
+			(at 181.356 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
