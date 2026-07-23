@@ -7243,6 +7243,16 @@
 		)
 		(uuid "1146eb3a-9dcd-4e77-b786-642995f008be")
 	)
+	(text "Note: It may be necessary to remove the W25Q32\nmemory from the YD-CH32V307VCT6 board."
+		(exclude_from_sim no)
+		(at 237.998 159.258 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "19233ca9-48cc-4c01-a9a5-3cd08824afea")
+	)
 	(text "PA2 (OPA1_IN+)"
 		(exclude_from_sim no)
 		(at 237.744 125.984 0)
@@ -15810,7 +15820,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "To CH32V307V-ETH"
+		(property "Value" "To CH32V307"
 			(at 226.06 154.686 0)
 			(effects
 				(font
