@@ -4,7 +4,8 @@ Fault locator for electronic circuits, comparing V.I. curves (voltage and curren
 
 Operation based on this project: [Curve-Tracer-ESP32](https://github.com/rtek1000/Curve-Tracer-ESP32)
 
-[CH32V307-ETH board (YD-CH32V307VCT6)](https://github.com/rtek1000/YD-CH32V307VCT6_ETHERNET-LWIP)
+
+[CH32V307-ETH board test (YD-CH32V307VCT6)](https://github.com/rtek1000/YD-CH32V307VCT6_ETHERNET-LWIP)
 
 ![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/YD-CH32V307VCT6.png)
 
