@@ -10,6 +10,12 @@ Note: Work in progress, just demonstrative, not functional, sorry.
 
 ------------
 
+### Schematic
+
+![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/Curve%20Tracer%20CH32V307%20v1.png)
+
+------------
+
 This repository contains the single-channel analog hardware design for a high-resolution instrumentation 3D Curve Tracer, specifically engineered for diagnostics and reverse engineering of sensitive processors and CPLDs.
 
 ## 🔌 1. Physical Hardware Specifications
