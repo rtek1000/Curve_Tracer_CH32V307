@@ -36,6 +36,7 @@ X-Axis: Voltage ($V$)
 Y-Axis: Current ($I$)
 Z-Axis: Frequency ($f$)
 What you see: The graph will form a "tunnel" or a surface. At low frequencies, you will see only the static diode curve. As the frequency (Z-axis) increases, the curve opens up into an elliptical shape due to the capacitive reactance of the chip's gates. Damaged pins or those with thermal degradation will exhibit unique, asymmetric deformations at higher frequencies.
+
 2. Z-Axis via DC Voltage Bias (Parametric Sweep)
 Often, a logic gate or internal transistor only manifests leakage or a defect when subjected to a constant bias voltage while an alternating current (AC) signal is superimposed upon it.
 How to scale the signals: Use a composite waveform. Generate your 1.4 Vpp test sine wave, but add a DC voltage step (DC offset) to the signal with each complete cycle. For example: Cycle 1 (Offset = 0 V), Cycle 2 (Offset = 0.2 V), Cycle 3 (Offset = 0.4 V), etc. The resulting 3D graph:
@@ -43,6 +44,7 @@ X-axis: Instantaneous AC voltage
 Y-axis: Instantaneous current
 Z-axis: DC offset voltage (bias)
 What you see: A surface showing how the dynamic behavior of the CPLD pin changes under DC voltage stress. It is the perfect tool for mapping the exact semiconductor breakdown or latch-up point.
+
 3. Z-axis via Amplitude Modulation (Power Signature)
 Evaluating the component at a single voltage step might miss failures that occur only at very low voltages or specific conduction thresholds.
 How to scale the signals: Instead of using a fixed-amplitude sine wave, generate an amplitude-modulated (AM) sine wave—that is, a sine wave where the peak grows linearly with each cycle (enveloped by a ramp), starting from 0V up to the safe limit of 1.4Vpp.
@@ -51,6 +53,7 @@ X-axis: Instantaneous voltage
 Y-axis: Instantaneous current
 Z-axis: Maximum cycle amplitude ($V_{peak}$)
 What you see: Instead of a single line or flat ellipse, you plot a continuous surface (a cone or three-dimensional ramp). This allows for the analysis of component linearity across multiple energy levels simultaneously, highlighting subtle variations in dynamic resistance (curve slope) that would go unnoticed in standard testing.
+
 4. Z-axis via Multi-Pin (Cross-Signature Matrix)
 When testing processors and CPLDs, the most advanced test is not pin-by-pin against GND, but rather analyzing interference or coupling between neighboring pins.
 How to scale the signals: Inject the 1.4Vpp signal into Pin A (and measure the current there for the Y-axis), but use extra channels to inject phase-shifted or static signals into the surrounding Pins B, C, and D. Sequentially toggle the active pin.
@@ -59,6 +62,7 @@ X-axis: Voltage on the pin under test
 Y-axis: Current on the pin under test
 Z-axis: Adjacent pin index or neighbor's logic state
 What you see: A three-dimensional map of crosstalk or current leakage between the internal channels of the CPLD or processor. If the chip's internal isolation is degraded, the curve for Pin A will change shape drastically depending on the electrical state of Pin B.
+
 5. If the user specifies the integrated circuit's operating voltage before starting the test (e.g., 1.8V for CPLDs or 3.3V for processor), you can implement a software-based "Smart Safety" layer on the CH32V307.
 The firmware will use this information to dynamically recalculate the mathematical saturation limits for the DAC1 and DAC2 registers. This physically prevents the microcontroller from generating any voltage that exceeds the dangerous conduction thresholds for that logic family, even when operating in Bridge mode.
 Below is the exact mathematical logic the CH32V307 must execute in its firmware to ensure this real-time protection:
@@ -77,6 +81,15 @@ Minimum Voltage = $0\text{ V}$ (For total safety, avoiding negative virtual AC).
 The software converts these voltages into register values ​​(0–4095):
 VALOR_MAX_DAC = $2.1\text{ V} / 0.0008058\text{ V} = 2606$
 VALOR_MIN_DAC = $0\text{ V} / 0.0008058\text{ V} = 0$
+
+6. In the CH32V307, the internal operational amplifiers (referred to as OPA or AMP) have their input and output pins mapped to fixed physical GPIOs on Port A and Port B. Leveraging the 4 available hardware blocks—split between the generation (injection) and reading (return) circuits:
+🏗️ Generation Side (DAC Output Attenuation)
+Internal OPA1: Connected to the DAC1 output. It is configured via registers (firmware) using internal resistors to attenuate the maximum amplitude from 3.3V down to the safe test level of 1.4 Vpp. Its output feeds into the first external OPA356. [2]
+Internal OPA2: Connected to the DAC2 output. It performs the same role as OPA1 when running dual-frequency mode or a dynamic virtual ground reference, independently limiting the voltage ceiling. [2]
+📈 Reading Side (Signal Restoration before the ADC)
+Since the signal returning from the probe is attenuated to a maximum of 1.4V, injecting it directly into the CH32V307 ADC (which reads up to 3.3V) would result in losing more than half of the 12-bit converter's resolution. [2]
+Internal OPA3: Connected to the X-Axis (Voltage) reading line. It is configured via software as an amplifier with a gain of ~2.35x (3.3V / 1.4V = 2.35). It "stretches" the 1.4V signal back to the full 3.3V scale before passing it internally to the ADC1 pin.
+Internal OPA4: Connected to the Y-Axis (Current) reading line. It applies the same ~2.35x gain, allowing ADC2 to utilize the full 4095-step resolution range, ensuring incredibly sharp 3D plots in Python.
 
 ------------
 
