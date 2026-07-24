@@ -38,6 +38,8 @@ Since the **DAC2 (PA5)** analog silicon blocks and the **OPA1 (PA2)** standard i
 
 Failure to remove the component will result in destructive electrical conflicts and severe geometric distortion of the Curve Tracer's test ellipses at high frequencies, caused by the parasitic capacitance of the integrated traces.
 
+![img](https://raw.githubusercontent.com/rtek1000/Curve_Tracer_CH32V307/refs/heads/main/Hardware/YD-CH32V307VCT6_W25Q32.png)
+
 ------------
 
 # For the next steps:
